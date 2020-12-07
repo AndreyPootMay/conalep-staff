@@ -1,0 +1,9 @@
+<h2>My offices</h2>
+
+<ul class="offices">
+    <li *ngFor="let office of offices" [class.selected]="office === selectedOffice" (click)="onSelect(office)">
+        <span class="badge">{{office.id}}</span> {{office.name}}
+    </li>
+</ul>
+
+<app-office-detail [office]="selectedOffice"></app-office-detail>
