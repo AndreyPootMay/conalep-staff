@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
-import { Office } from '../interfaces/Office';
+import { Office } from './../interfaces/Office';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class OfficesService {
@@ -14,7 +15,8 @@ export class OfficesService {
       assigned_admin: "Lic. Jorge Noe Ricalde Pak"
     },
   ];
-  constructor() {
+
+  constructor(private http: HttpClient) {
     console.log("Servicio Listo para Usarse");
   }
 

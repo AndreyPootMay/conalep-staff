@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { OfficesService } from "../../services/offices.service";
 
 import { Router } from "@angular/router";
-import { Office } from '../../interfaces/Office';
+import { Office } from './../../interfaces/Office';
 
 @Component({
   selector: "app-offices",
@@ -15,7 +15,6 @@ export class OfficesComponent implements OnInit {
 
   ngOnInit() {
     this.offices = this._officesService.getOffices();
-    // console.log(this.offices);
   }
 
   viewOffice(idx: number) {

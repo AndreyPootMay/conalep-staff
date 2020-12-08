@@ -16,11 +16,9 @@ export class OfficeCardComponent implements OnInit {
     this.officeSelected = new EventEmitter();
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   viewOffice() {
-    //   console.log(this.index);
-      this.router.navigate(["/office", this.index]);
-    // this.officeSelected.emit(this.index);
+    this.router.navigate(["/office", this.index]);
   }
 }
