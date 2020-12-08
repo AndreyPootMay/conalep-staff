@@ -1,36 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-
-// Interfaces
-import { Office } from '../../interfaces/office';
-
-// Services
-import { OfficeService } from '../../services/office.service';
-import { MessageService } from '../../services/message.service';
+import { Component, OnInit } from "@angular/core";
+import { OfficesService, Office } from "../../services/offices.service";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-offices',
-  templateUrl: './offices.component.html',
-  styleUrls: ['./offices.component.css']
+  selector: "app-offices",
+  templateUrl: "./offices.component.html"
 })
 export class OfficesComponent implements OnInit {
+  offices: Office[] = [];
 
-  selectedOffice: Office;
-
-  offices: Office[];
-
-  constructor(private officeService: OfficeService, private messageService: MessageService) { }
+  constructor(private _officesService: OfficesService, private router: Router) {}
 
   ngOnInit() {
-    this.getOffices();
+    this.offices = this._officesService.getOffices();
+    // console.log(this.offices);
   }
 
-  onSelect(office: Office): void {
-    this.selectedOffice = office;
-    this.messageService.add(`OfficesComponent: Selected office id=${office.id}`);
-  }
-
-  getOffices(): void {
-    this.officeService.getHeroes()
-        .subscribe(offices => this.offices = offices);
+  viewOffice(idx: number) {
+    this.router.navigate(["/office", idx]);
   }
 }

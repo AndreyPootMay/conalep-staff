@@ -1,9 +1,9 @@
-<h2>My offices</h2>
+<h1>Oficinas <small>Conalep Cancún 2</small></h1>
 
-<ul class="offices">
-    <li *ngFor="let office of offices" [class.selected]="office === selectedOffice" (click)="onSelect(office)">
-        <span class="badge">{{office.id}}</span> {{office.name}}
-    </li>
-</ul>
+<hr>
 
-<app-office-detail [office]="selectedOffice"></app-office-detail>
+<div class="card-columns">
+
+    <app-office-card (officeSelected)="viewOffice($event)" [office]="office" [index]="i" *ngFor="let office of offices; let i = index"></app-office-card>
+
+</div>

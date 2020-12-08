@@ -1,28 +1,36 @@
-// Modules
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-// Components
-import { AppComponent } from './app.component';
-import { OfficesComponent } from './components/offices/offices.component';
-import { OfficeDetailComponent } from './components/office-detail/office-detail.component';
-import { MessagesComponent } from './components/messages/messages.component';
+// RUTAS
+import { APP_ROUTING } from "./app.routes";
+
+// SERVICIOS
+
+import { OfficesService } from "./services/offices.service";
+
+// COMPONENTES
+import { AppComponent } from "./app.component";
+import { NavbarComponent } from "./components/shared/navbar/navbar.component";
+import { HomeComponent } from "./components/home/home.component";
+import { AboutComponent } from "./components/about/about.component";
+import { OfficesComponent } from "./components/offices/offices.component";
+import { OfficeComponent } from "./components/office/office.component";
+import { SearchComponent } from "./components/search/search.component";
+import { OfficeCardComponent } from "./components/office-card/office-card.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
+    HomeComponent,
+    AboutComponent,
     OfficesComponent,
-    OfficeDetailComponent,
-    MessagesComponent
+    OfficeComponent,
+    SearchComponent,
+    OfficeCardComponent
   ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
-  providers: [
-    // no need to place any providers due to the `providedIn` flag...
-  ],
-  bootstrap: [ AppComponent ]
+  imports: [BrowserModule, APP_ROUTING],
+  providers: [OfficesService],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

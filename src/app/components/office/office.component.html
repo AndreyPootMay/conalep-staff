@@ -1,0 +1,25 @@
+<h1 class="animated fadeIn">{{office.name}}</h1>
+<h3><small>({{office.schedules }})</small></h3>
+<hr>
+
+<div class="row animated fadeIn fast">
+    <div class="col-md-8">
+        <h3>{{office.name}}</h3>
+
+        <hr>
+
+        <h3>Encargado</h3>
+        <p><b>{{office.assigned_admin}}</b></p>
+        <p>
+            {{office.details}}
+        </p>
+
+        <h4>Contacto:</h4>
+        <p>{{office.email}}</p>
+    </div>
+
+    <div class="col-md-4">
+        <br><br>
+        <a [routerLink]="['/offices']" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+</div>

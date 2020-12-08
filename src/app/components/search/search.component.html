@@ -1,0 +1,18 @@
+<h1>Buscador <small>{{term}}</small></h1>
+<hr>
+
+<div class="row animated  fadeIn fast" *ngIf="offices.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No existen resultados con el término {{term}}
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card-columns">
+
+    <app-office-card [office]="office" [index]="office.idx" *ngFor="let office of offices"></app-office-card>
+
+</div>

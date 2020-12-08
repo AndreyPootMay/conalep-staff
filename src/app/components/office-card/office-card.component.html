@@ -1,0 +1,9 @@
+<div class="card animated fadeIn fast">
+    <div class="card-body">
+        <h5 class="card-title">{{ office.name }}</h5>
+        <p class="card-text">{{office.details}}</p>
+        <p class="card-text"><small class="text-muted">{{office.schedules}}</small></p>
+    </div>
+    <button (click)="viewOffice()" type="button" class="btn btn-outline-success btn-block">
+    Ver más...
+  </button>
