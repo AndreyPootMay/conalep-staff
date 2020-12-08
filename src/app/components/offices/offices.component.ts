@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { OfficesService, Office } from "../../services/offices.service";
+import { OfficesService } from "../../services/offices.service";
+
 import { Router } from "@angular/router";
+import { Office } from '../../interfaces/Office';
 
 @Component({
   selector: "app-offices",

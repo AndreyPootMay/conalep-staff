@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Office } from '../interfaces/Offices';
+import { Office } from '../interfaces/Office';
 
 @Injectable()
 export class OfficesService {
