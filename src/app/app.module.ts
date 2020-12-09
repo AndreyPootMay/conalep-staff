@@ -17,6 +17,8 @@ import { OfficesComponent } from "./components/offices/offices.component";
 import { OfficeComponent } from "./components/office/office.component";
 import { SearchComponent } from "./components/search/search.component";
 import { OfficeCardComponent } from "./components/office-card/office-card.component";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import { OfficeCardComponent } from "./components/office-card/office-card.compon
     SearchComponent,
     OfficeCardComponent
   ],
-  imports: [BrowserModule, APP_ROUTING, HttpClientModule],
+  imports: [BrowserModule, APP_ROUTING, HttpClientModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [OfficesService],
   bootstrap: [AppComponent]
 })
