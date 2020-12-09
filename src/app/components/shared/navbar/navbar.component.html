@@ -3,7 +3,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" [routerLink]="['home']">
     <img src="assets/img/conalep_logo.png" width="30" height="30" alt="">
   </a>
 
@@ -12,7 +12,7 @@
 
       <!-- active -->
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['home']">Home</a>
+        <a class="nav-link" [routerLink]="['home']">Inicio</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['offices']">Oficinas</a>
@@ -22,13 +22,11 @@
       </li>
     </ul>
 
-
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Buscar oficina" (keyup.enter)="searchOffice(searchText.value)" #searchText>
       <button (click)="searchOffice(searchText.value)"
-          class="btn btn-outline-primary my-2 my-sm-0" type="button">Buscar</button>
+          class="btn btn-outline-success my-2 my-sm-0" type="button">Buscar</button>
     </form>
-
 
   </div>
 </nav>
