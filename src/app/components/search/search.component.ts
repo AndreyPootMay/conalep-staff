@@ -13,13 +13,17 @@ export class SearchComponent implements OnInit {
   constructor(
     private activateRouter: ActivatedRoute,
     private _officesService: OfficesService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.activateRouter.params.subscribe(params => {
-      this.term = params["term"];
-      this.offices = this._officesService.searchOffices(params["term"]);
-      console.log(this.offices);
+      this.offices = this._officesService.searchOffices(params['term'])
+        .subscribe(
+          res => {
+            this.offices = res;
+          },
+          err => console.error(err)
+        );
     });
   }
 }

@@ -8,11 +8,8 @@
         </div>
 
     </div>
-
 </div>
 
 <div class="card-columns">
-
-    <app-office-card [office]="office" [index]="office.idx" *ngFor="let office of offices"></app-office-card>
-
+    <app-office-card [office]="office" [index]="office.id" *ngFor="let office of offices; let i = index"></app-office-card>
 </div>
