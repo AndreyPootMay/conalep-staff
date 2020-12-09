@@ -1,11 +1,11 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { HttpClientModule } from '@angular/common/http';
 
 // RUTAS
 import { APP_ROUTING } from "./app.routes";
 
 // SERVICIOS
-
 import { OfficesService } from "./services/offices.service";
 
 // COMPONENTES
@@ -29,7 +29,7 @@ import { OfficeCardComponent } from "./components/office-card/office-card.compon
     SearchComponent,
     OfficeCardComponent
   ],
-  imports: [BrowserModule, APP_ROUTING],
+  imports: [BrowserModule, APP_ROUTING, HttpClientModule],
   providers: [OfficesService],
   bootstrap: [AppComponent]
 })

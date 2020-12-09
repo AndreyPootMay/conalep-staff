@@ -4,6 +4,6 @@
 
 <div class="card-columns">
 
-    <app-office-card (officeSelected)="viewOffice($event)" [office]="office" [index]="i" *ngFor="let office of offices; let i = index"></app-office-card>
+    <app-office-card (officeSelected)="viewOffice($event)" [office]="office" [index]="office.id" *ngFor="let office of offices; let i = index"></app-office-card>
 
 </div>

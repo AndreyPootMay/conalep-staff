@@ -7,7 +7,7 @@ import { OfficesService } from "../../services/offices.service";
   templateUrl: "./search.component.html"
 })
 export class SearchComponent implements OnInit {
-  offices: any[] = [];
+  offices: any;
   term: string = '';
 
   constructor(

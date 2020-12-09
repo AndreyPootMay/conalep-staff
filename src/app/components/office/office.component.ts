@@ -14,8 +14,14 @@ export class OfficeComponent {
     private _officesService: OfficesService
   ) {
     this.activatedRoute.params.subscribe(params => {
-      this.office = this._officesService.getOffice(params["id"]);
-      console.log(this.office);
+      this.office = this._officesService.getOffice(params['id'])
+      .subscribe(
+        res => {
+          this.office = res;
+          console.log(res)
+        },
+        err => console.error(err)
+      );
     });
   }
 }
