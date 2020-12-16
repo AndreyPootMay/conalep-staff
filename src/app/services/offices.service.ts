@@ -14,7 +14,7 @@ export class OfficesService {
   }
 
   getOffice(idx: number) {
-    return this.http.get(`${this.API_URI}/offices/${idx}`);
+    return this.http.get(`${this.API_URI}/offices/${idx}?expand=officeServices`);
   }
 
   searchOffices(term: string) {

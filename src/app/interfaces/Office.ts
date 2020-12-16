@@ -6,4 +6,5 @@ export interface Office {
     email: string;
     assigned_admin: string;
     idx?: number;
+    officeServices: any;
 }
