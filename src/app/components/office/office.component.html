@@ -1,21 +1,37 @@
 <h1 class="animated fadeIn">{{office.name}}</h1>
-<h3><small>({{ office.schedules }})</small></h3>
+<h2><small>({{ office.schedules }})</small></h2>
 <hr>
 
 <div class="row animated fadeIn fast">
     <div class="col-md-8">
-        <h3>{{office.name}}</h3>
-
-        <hr>
-
-        <h3>Encargado</h3>
-        <p><b>{{office.assigned_admin}}</b></p>
-        <p>
-            {{office.details}}
-        </p>
+        <h3>Jef(a) del departamento</h3>
+        <p><b>{{ office.assigned_admin }}</b></p>
+        <p>{{ office.details }}</p>
 
         <h4>Contacto:</h4>
-        <p>{{office.email}}</p>
+        <p>{{ office.email }}</p>
+
+        <div class="text-center">
+            <table class="table table-responsive">
+                <caption style="caption-side: top;">Servicios</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Servicios</th>
+                        <th scope="col">Encargad(a)</th>
+                        <th scope="col">Correo electrónico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let subItem of office.officeServices; let i = index">
+                        <th scope="row">{{subItem.id}}</th>
+                        <td>{{subItem.services_detail}}</td>
+                        <td>{{subItem.team_member_name}}</td>
+                        <td>{{subItem.team_member_email}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div class="col-md-4">
