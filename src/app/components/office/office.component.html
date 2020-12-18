@@ -11,23 +11,23 @@
         <h4>Contacto:</h4>
         <p>{{ office.email }}</p>
 
-        <div class="text-center">
+        <div class="text-center" *ngIf="office.officeServices.length != 0">
             <table class="table table-responsive">
                 <caption style="caption-side: top;">Servicios</caption>
                 <thead>
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Servicios</th>
-                        <th scope="col">Encargad(a)</th>
+                        <th scope="col">Responsable</th>
                         <th scope="col">Correo electrónico</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let subItem of office.officeServices; let i = index">
-                        <th scope="row">{{subItem.id}}</th>
-                        <td>{{subItem.services_detail}}</td>
-                        <td>{{subItem.team_member_name}}</td>
-                        <td>{{subItem.team_member_email}}</td>
+                        <th scope="row">{{ subItem.id }}</th>
+                        <td>{{ subItem.services_detail }}</td>
+                        <td>{{ subItem.team_member_name }}</td>
+                        <td>{{ subItem.team_member_email }}</td>
                     </tr>
                 </tbody>
             </table>
