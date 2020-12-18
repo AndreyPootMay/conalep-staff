@@ -11,7 +11,7 @@
         <h4>Contacto:</h4>
         <p>{{ office.email }}</p>
 
-        <div class="text-center" *ngIf="office.officeServices.length != 0">
+        <div class="text-center" *ngIf="office.officeServices">
             <table class="table table-responsive">
                 <caption style="caption-side: top;">Servicios</caption>
                 <thead>

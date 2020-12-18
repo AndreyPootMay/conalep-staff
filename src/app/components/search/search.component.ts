@@ -21,6 +21,7 @@ export class SearchComponent implements OnInit {
         .subscribe(
           res => {
             this.offices = res;
+            //this.term = params['term'];
           },
           err => console.error(err)
         );
