@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class OfficesService {
-  API_URI = 'http://localhost:80/sald/api/v1';
+  API_URI = 'http://localhost:3000';
 
   constructor(private http: HttpClient) { }
 
@@ -13,8 +13,8 @@ export class OfficesService {
     return this.http.get(`${this.API_URI}/offices`);
   }
 
-  getOffice(idx: number) {
-    return this.http.get(`${this.API_URI}/offices/${idx}?expand=officeServices`);
+  getOffice(idx: number) { //TODO: Add YII2 GETTER ?expand=officeServices
+    return this.http.get(`${this.API_URI}/offices/${idx}`);
   }
 
   searchOffices(term: string) {
