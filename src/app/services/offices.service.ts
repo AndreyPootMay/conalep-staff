@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class OfficesService {
-  API_URI = 'http://localhost:3000';
+  API_URI = 'https://conalep2-offices-rest.herokuapp.com/';
 
   constructor(private http: HttpClient) { }
 
