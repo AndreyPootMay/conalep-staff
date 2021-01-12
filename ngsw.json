@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1610471254866,
+  "timestamp": 1610471517236,
   "index": "https://andreypootmay.github.io/conalep-staff/index.html",
   "assetGroups": [
     {
@@ -12,7 +12,7 @@
       },
       "urls": [
         "https://andreypootmay.github.io/conalep-staff/index.html",
-        "https://andreypootmay.github.io/conalep-staff/main.3e11c65ee87a5b34f192.js",
+        "https://andreypootmay.github.io/conalep-staff/main.1f9321607a6f00716661.js",
         "https://andreypootmay.github.io/conalep-staff/manifest.webmanifest",
         "https://andreypootmay.github.io/conalep-staff/polyfills.b5ac2cf7616f3422cfcf.js",
         "https://andreypootmay.github.io/conalep-staff/runtime.359d5ee4682f20e936e9.js",
@@ -92,8 +92,8 @@
     "https://andreypootmay.github.io/conalep-staff/assets/libs/bootstrap-4.3.1-dist/js/bootstrap.js.map": "d04cd958eed85b70479a370206f89c083b7fa702",
     "https://andreypootmay.github.io/conalep-staff/assets/libs/bootstrap-4.3.1-dist/js/bootstrap.min.js": "6778fed3cf095a318141a31f455c8f4663885bde",
     "https://andreypootmay.github.io/conalep-staff/assets/libs/bootstrap-4.3.1-dist/js/bootstrap.min.js.map": "d64a289f698e446b0cc78e83dd0161bb8e2f2075",
-    "https://andreypootmay.github.io/conalep-staff/index.html": "870d69c08f2bac1a960ad0b5408090156299492c",
-    "https://andreypootmay.github.io/conalep-staff/main.3e11c65ee87a5b34f192.js": "37fed8beb51db1aabd275c110210d62198b37e76",
+    "https://andreypootmay.github.io/conalep-staff/index.html": "c2160a1ce545b7754f1f9c07550a83ee8046f780",
+    "https://andreypootmay.github.io/conalep-staff/main.1f9321607a6f00716661.js": "3ef1648d3ea746120153ed537974975f5d50eb29",
     "https://andreypootmay.github.io/conalep-staff/manifest.webmanifest": "0761fb657899a7aaa4319827d19d1ad0ab8395f0",
     "https://andreypootmay.github.io/conalep-staff/polyfills.b5ac2cf7616f3422cfcf.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
     "https://andreypootmay.github.io/conalep-staff/runtime.359d5ee4682f20e936e9.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
