@@ -19,6 +19,7 @@ import { SearchComponent } from "./components/search/search.component";
 import { OfficeCardComponent } from "./components/office-card/office-card.component";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { RegistrationproccessComponent } from './components/registrationproccess/registrationproccess.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { environment } from '../environments/environment';
     OfficesComponent,
     OfficeComponent,
     SearchComponent,
-    OfficeCardComponent
+    OfficeCardComponent,
+    RegistrationproccessComponent
   ],
   imports: [BrowserModule, APP_ROUTING, HttpClientModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [OfficesService],

@@ -1,0 +1,9 @@
+ul {
+    list-style: none;
+}
+  
+ul.prerequisites li:before {
+    content: '✓ ';
+    color: rgb(2, 145, 9);
+}
+  
