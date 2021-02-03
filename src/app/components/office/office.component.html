@@ -16,7 +16,6 @@
                 <caption style="caption-side: top;">Servicios</caption>
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
                         <th scope="col">Servicios</th>
                         <th scope="col">Responsable</th>
                         <th scope="col">Correo electrónico</th>
@@ -24,7 +23,6 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let subItem of office.officeServices; let i = index">
-                        <th scope="row">{{ subItem.id }}</th>
                         <td>{{ subItem.services_detail }}</td>
                         <td>{{ subItem.team_member_name }}</td>
                         <td>{{ subItem.team_member_email }}</td>
