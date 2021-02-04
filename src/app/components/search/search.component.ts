@@ -7,24 +7,19 @@ import { OfficesService } from "../../services/offices.service";
   templateUrl: "./search.component.html"
 })
 export class SearchComponent implements OnInit {
-  offices: any;
+  offices: any[] = [];
   term: string = '';
 
-  constructor(
-    private activateRouter: ActivatedRoute,
-    private _officesService: OfficesService
-  ) { }
+  constructor(private activatedRoute: ActivatedRoute,
+    private _officesService: OfficesService) {
+
+  }
 
   ngOnInit() {
-    this.activateRouter.params.subscribe(params => {
-      this.offices = this._officesService.searchOffices(params['term'])
-        .subscribe(
-          res => {
-            this.offices = res;
-            //this.term = params['term'];
-          },
-          err => console.error(err)
-        );
+    this.activatedRoute.params.subscribe(params => {
+      this.term = params['term'];
+      this.offices = this._officesService.searchOffices(params['term']);
+      console.log(this.offices);
     });
   }
 }

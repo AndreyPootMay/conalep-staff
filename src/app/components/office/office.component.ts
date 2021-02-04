@@ -9,19 +9,11 @@ import { OfficesService } from "../../services/offices.service";
 export class OfficeComponent {
   office: any = {};
 
-  constructor(
-    private activatedRoute: ActivatedRoute,
+  constructor(private activatedRoute: ActivatedRoute,
     private _officesService: OfficesService
   ) {
     this.activatedRoute.params.subscribe(params => {
-      this.office = this._officesService.getOffice(params['id'])
-      .subscribe(
-        res => {
-          this.office = res;
-          console.log(res)
-        },
-        err => console.error(err)
-      );
+      this.office = this._officesService.getOffice(params['id']);
     });
   }
 }
