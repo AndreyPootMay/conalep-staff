@@ -222,7 +222,7 @@ export class OfficesService {
   }
 
   getOffice(id: number) {
-    return this.offices[id];
+    return this.offices[id-1];
   }
 
   searchOffices(term: string): Office[] {
